@@ -3,7 +3,7 @@
 namespace M6Web\Bundle\ElasticsearchBundle\Tests\Units\DependencyInjection;
 
 use M6Web\Bundle\ElasticsearchBundle\DependencyInjection\M6WebElasticsearchExtension as TestedClass;
-use mageekguy\atoum\test;
+use atoum\atoum\test;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 
@@ -192,7 +192,7 @@ class M6WebElasticsearchExtension extends test
     {
         $this
             ->object($container->get('m6web_elasticsearch.client.'.$clientName))
-            ->isInstanceOf('\Elasticsearch\Client');
+            ->isInstanceOf('\Opensearch\Client');
 
         return $this;
     }

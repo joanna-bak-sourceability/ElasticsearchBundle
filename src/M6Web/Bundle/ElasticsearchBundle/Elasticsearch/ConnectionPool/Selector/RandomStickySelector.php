@@ -2,15 +2,10 @@
 
 namespace M6Web\Bundle\ElasticsearchBundle\Elasticsearch\ConnectionPool\Selector;
 
-use Elasticsearch\Common\Exceptions\NoNodesAvailableException;
-use Elasticsearch\ConnectionPool\Selectors\SelectorInterface;
-use Elasticsearch\Connections\ConnectionInterface;
+use Opensearch\Common\Exceptions\NoNodesAvailableException;
+use Opensearch\ConnectionPool\Selectors\SelectorInterface;
+use Opensearch\Connections\ConnectionInterface;
 
-/**
- * Class RandomStickySelector
- *
- * @package M6Web\Bundle\ElasticsearchBundle\Elasticsearch\ConnectionPool\Selector
- */
 class RandomStickySelector implements SelectorInterface
 {
     protected $current;
@@ -18,13 +13,10 @@ class RandomStickySelector implements SelectorInterface
     /**
      * Select a random connection from the provided array and stick with it.
      *
-     * @param ConnectionInterface[] $connections Array of Connection objects
-     *
+     * @inheritdoc
      * @throws NoNodesAvailableException
-     *
-     * @return ConnectionInterface
      */
-    public function select($connections)
+    public function select(array $connections): ConnectionInterface
     {
         if (empty($connections)) {
             throw new NoNodesAvailableException('No node to select from…');

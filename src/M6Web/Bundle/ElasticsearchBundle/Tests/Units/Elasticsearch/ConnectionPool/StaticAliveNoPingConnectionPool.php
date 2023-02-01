@@ -2,12 +2,12 @@
 
 namespace M6Web\Bundle\ElasticsearchBundle\Tests\Units\Elasticsearch\ConnectionPool;
 
-use Elasticsearch\Common\Exceptions\NoNodesAvailableException;
-use Elasticsearch\ConnectionPool\Selectors\SelectorInterface;
-use Elasticsearch\Connections\Connection;
-use Elasticsearch\Connections\ConnectionFactoryInterface;
+use Opensearch\Common\Exceptions\NoNodesAvailableException;
+use Opensearch\ConnectionPool\Selectors\SelectorInterface;
+use Opensearch\Connections\Connection;
+use Opensearch\Connections\ConnectionFactoryInterface;
 use M6Web\Bundle\ElasticsearchBundle\Tests\Units\Elasticsearch\ConnectionMocker;
-use mageekguy\atoum\test;
+use atoum\atoum\test;
 
 /**
  * Class StaticAliveNoPingConnectionPool

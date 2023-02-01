@@ -42,9 +42,9 @@ class M6WebElasticsearchExtension extends Extension
     }
 
     /**
-     * @return string
+     * @inheritdoc
      */
-    public function getAlias()
+    public function getAlias(): string
     {
         return 'm6web_elasticsearch';
     }

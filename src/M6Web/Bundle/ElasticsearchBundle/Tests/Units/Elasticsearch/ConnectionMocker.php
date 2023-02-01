@@ -2,7 +2,7 @@
 
 namespace M6Web\Bundle\ElasticsearchBundle\Tests\Units\Elasticsearch;
 
-use Elasticsearch\Connections\Connection;
+use Opensearch\Connections\Connection;
 
 /**
  * Class ConnectionMocker

@@ -2,19 +2,15 @@
 
 namespace M6Web\Bundle\ElasticsearchBundle;
 
+use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-/**
- * Class M6WebElasticsearchBundle
- *
- * @package M6Web\Bundle\ElasticsearchBundle
- */
 class M6WebElasticsearchBundle extends Bundle
 {
     /**
-     * @return DependencyInjection\M6WebElasticsearchExtension|null|\Symfony\Component\DependencyInjection\Extension\ExtensionInterface
+     * @inheritdoc
      */
-    public function getContainerExtension()
+    public function getContainerExtension(): ?ExtensionInterface
     {
         return new DependencyInjection\M6WebElasticsearchExtension();
     }
